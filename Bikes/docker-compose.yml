@@ -1,0 +1,32 @@
+version: '3'
+services:
+  hk-nginx:
+   container_name: hk-nginx
+   image: nginx:1.13
+   restart: always
+   ports:
+   - 80:80
+   - 443:443
+   volumes:
+   - ./nginx/conf.d:/etc/nginx/conf.d
+   depends_on:
+   - app
+ 
+  hk-mysql:
+   container_name: hk-mysql
+   image: mysql
+   environment:
+    MYSQL_DATABASE: test
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_ROOT_HOST: '%'
+   ports:
+   - "3306:3306"
+   restart: always
+  
+  app:
+    restart: always
+    build: .
+    expose:
+      - "8080"
+    depends_on:
+      - hk-mysql
