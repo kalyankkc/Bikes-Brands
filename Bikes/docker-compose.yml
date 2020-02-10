@@ -14,11 +14,11 @@ services:
  
   hk-mysql:
    container_name: hk-mysql
-   image: mysql
+   image: mariadb
    environment:
     MYSQL_DATABASE: test
     MYSQL_ROOT_PASSWORD: root
-    MYSQL_ROOT_HOST: '%'
+    MYSQL_ROOT_HOST: mysql
    ports:
    - "3306:3306"
    restart: always
