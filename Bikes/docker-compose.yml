@@ -20,7 +20,7 @@ services:
     MYSQL_ROOT_PASSWORD: root
     MYSQL_ROOT_HOST: mysql
    ports:
-   - "3306:3306"
+   - "3309:3306"
    restart: always
   
   app:
