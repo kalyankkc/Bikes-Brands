@@ -1,2 +1,3 @@
 ---
-# tasks file for common
+- include: 'apache.yml'
+- include: 'tomcat.yml'
