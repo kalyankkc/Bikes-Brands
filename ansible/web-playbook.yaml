@@ -12,8 +12,7 @@
     - Restart Tomcat
 
 
-  - name: Copy Petclinic Project War Files
-    copy: src=templates/*.war dest=/opt/SP/apps/tomcat/webapps/ROOT.war mode=0644
+ 
 
   handlers:
   - name: Restart Tomcat
