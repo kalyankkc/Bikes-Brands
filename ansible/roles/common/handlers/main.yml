@@ -1,3 +1,4 @@
 ---
 - name: Restart Tomcat
   shell: "nohup sh /opt/SP/apps/tomcat/bin/catalina.sh start" 
+  
